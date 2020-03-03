@@ -1,0 +1,18 @@
+.container{
+  text-align: center;
+}
+.row{
+  margin-top: 80px;
+}
+p {
+  margin-top: 15px;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media(max-width: 576px){
+  .sm-first{
+    order: -1;
+  }
+}

@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  color: #32325f;
+}
+.hero{
+  padding-top: 70px;
+  padding-bottom: 190px;
+  background-color: #f4f5f7;
+}
+.container{
+  max-width: 1140px;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+.brand{
+  color: #95989a;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.social-btns {
+  width: 24px;
+  margin-right: 10px;
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-text{
+  width: 50%;
+}
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 15px;
+}
+.title{
+  font-size: 48px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 26px;
+}
+.description{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+.price-tag{
+  font-size: 20px;
+  font-weight: 400;
+}
+.price{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  font-size: 48px;
+  font-weight: 400;
+}
+.btn{
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(173, 173, 173, 0.16);
+  border-radius: 6px;
+  padding: 20px 30px;
+  color: #ffffff;
+  background-color: grey;
+}
+.btn-success{
+  background-color: #2dce89;
+  margin-right: 20px;
+}
+.btn-probe{
+  background-color: #5e72e4;
+}
+.section{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.section-subtitle{
+  display: block;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.section-title{
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.wrap{
+  margin-top: 94px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.block{
+  width: 23%;
+  margin-right: 2%;
+}
+.block-text{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 40px 0;
+  line-height: 1.4;
+}
+.footer{
+  background-color: #32325f;
+  color: #ffffff;
+  padding: 70px 0 70px;
+}
+.footer-wrap{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-block{
+  width: 33%;
+}
+.footer-title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.footer a{
+  display: block;
+  color: #ffffff;
+}
+.footer p{
+  line-height: 1.4;
+}
+.people{
+  background-color: #f4f5f7;
+}
+.gallery{
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.photo{
+  overflow: hidden;
+  position: relative;
+  width: 360px;
+  height: 250px;
+}
+.photo img{
+  position: absolute;
+  clip:rect(36px 400px 250px 28px);
+  width: 360px;
+  height: 250px;
+}

@@ -1,0 +1,72 @@
+body{
+  color: #32325f;
+}
+.hero{
+  padding: 70px 0 190px;
+}
+.social img{
+  width: 30px;
+  margin-left: 15px;
+}
+.subtitle{
+  font-size: 20px;
+  font-weight: 400;
+}
+.title{
+  font-size: 48px;
+  font-weight: 700;
+}
+.price{
+  color: #525f7f;
+  font-size: 48px;
+  font-weight: 400;
+}
+.main{
+  margin-top: 100px;
+}
+.buttons{
+  margin-top: 30px;
+}
+.main-image img{
+  max-width: 100%;
+}
+.section{
+  padding: 100px 0;
+}
+.about-block{
+  margin-top: 100px;
+}
+.block-text{
+  margin-top: 40px;
+}
+.section-subtitle{
+  font-size: 20px;
+  font-weight: 400;
+}
+.section-title{
+  font-size: 48px;
+  font-weight: 700;
+}
+.photo-image{
+  margin-top: 60px;
+}
+.photo-image img{
+  max-width: 100%;
+  width: 360px;
+  height: 250px;
+}
+.footer{
+  background-color: #32325f;
+  color: #ffffff;
+}
+.footer-info{
+  margin-top: 35px;
+}
+.footer a{
+  display: block;
+}
+@media(max-width:574px){
+  .main-image{
+    margin-top: 50px;
+  }
+}
