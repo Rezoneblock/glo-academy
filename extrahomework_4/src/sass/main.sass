@@ -1,0 +1,155 @@
+@import 'variables'
+
+body,p,h1,h2,h3,h4 
+  margin: 0
+  padding: 0
+  font-family: Arial, Helvetica, sans-serif
+
+.header
+  background-color: darken($blue, 50%)
+  padding: 15px 0
+  color: white
+  &__title
+    font-size: 18px
+    font-weight: 700
+    line-height: 47px
+  
+  &__callback
+    text-align: right
+  
+
+.section
+  padding: 70px 0
+  text-align: center
+  &__title
+    font-size: 36px
+    font-weight: 700
+    color: darken($blue, 50%)
+    span
+      color: $blue*0.3+red
+    
+    
+    &__underline
+      margin: 10px auto
+      width: 200px
+      height: 2px
+      background-color: $blue
+    
+
+.coral
+  color: $blue*0.3+red
+
+.main
+  background-color: lighten($blue,30%)
+  position: relative
+  h1
+    margin-bottom: 25px
+    font-size: 60px
+    font-weight: 300
+    text-transform: uppercase
+    color: darken($blue, 50%)
+  
+  .sep
+     margin: 25px auto
+     width: 20px
+     height: 20px
+     border-radius: 50%
+     background-color: white
+     
+     h3
+       font-size: 36px
+       font-weight: 300
+       color: darken($blue, 50%)
+     
+     &__location
+       margin: 24px auto 21px
+       width: 300px
+       height: 64px
+       font-size: 18px
+       line-height: 64px
+       color: $blue
+       border: 1px solid darken($blue, 50%)
+     
+     .commet
+       margin-top: 55px
+       color: darkgray
+       font-size: 14px
+       line-height: 18px
+     
+
+.problems
+  &__list
+    text-align: left
+    ul
+      list-style: none
+      li
+        min-height: 100px
+        font-size: 18px
+        font-weight: 300
+        color: darken($blue, 50%)
+        &::before
+          position: relative
+          right: 30px
+          top: 25px
+          content: ''
+          display: block
+          width: 20px
+          height: 20px
+          background-color: $blue
+          border-radius: 50%
+    &__wrapper
+      margin: 0 auto
+      padding: 30px;
+      max-width: 700px;
+      border: 2px solid $blue
+      p
+        margin-bottom: 10px
+        font-size: 24px
+        color: darken($blue, 50%)
+.prove
+  background-color: lighten($blue, 30%)
+  &__img
+    margin: 25px auto 10px
+    min-height: 70px
+  
+  img
+    border-bottom: 1px solid $blue
+  
+
+.footer
+   padding: 15px 0;
+   font-size: 14px;
+   font-weight: 300;
+   background-color: darken($blue, 50%)
+   &__left
+     color: $blue*0.43+dimgray;
+     opacity: 0.5;
+   &__right
+     text-align: right;
+     color: $blue;
+     a
+       color: $blue;
+       text-decoration: none;
+       &:hover
+         text-decoration: underline;
+.button
+  padding: 10px 30px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: $blue*0.3+red;
+  border: 1px solid $blue*0.3+red;
+  border-radius: 25px;
+  &__start
+    margin-top: 20px;
+  &:hover
+    -webkit-box-shadow: 0 0 25px darkgray;
+    box-shadow: 0 0 25px darkgray;
+    background-color: $blue;
+    border: 1px solid lighten($blue, 30%);
+  &:focus
+    outline: none;
