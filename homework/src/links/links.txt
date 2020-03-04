@@ -1,0 +1,33 @@
+1 - https://wireframe.cc/tNrvuL
+вторая часть - https://wireframe.cc/R1tP0t (Создание прототипа cайта)
+
+2 - http://www.gordeevtimur.ru/lesson_4/src/ (Основы HTML) 
+
+3 - http://www.gordeevtimur.ru/lesson_5/src/ (Основы CSS)
+
+4 - http://www.gordeevtimur.ru/lesson_6/src/ (Блочная модель и позиционирование CSS)
+
+5 - http://www.gordeevtimur.ru/lesson_7.1/src/
+вторая часть - http://www.gordeevtimur.ru/lesson_7.2/src/ (Flexbox CSS)
+
+6 - http://www.gordeevtimur.ru/lesson_8/src/ (Вёрстка макета на HTML и CSS)
+
+7 - http://gordeevtimur.ru/lesson_9/src/ (Библиотека Bootstrap 4)
+
+8 - http://gordeevtimur.ru/lesson_10/src/ (Вёрстка на Bootstrap)
+
+1 - http://gordeevtimur.ru/extrahomework_1/src/ (задание на баллы)
+
+9 - https://drive.google.com/open?id=1F-2B4BNSZ_s2bH_aUveTXJm-qjXbsqSP4ZNPOJekIBA
+вторая часть - https://drive.google.com/open?id=17_HXyRFRS788pGU8-LMI7rGr7_f8rQSJfBupGur4ajQ (Считаем цену за работу)
+
+2 - http://gordeevtimur.ru/extrahomework_2/src/ (задание на быллы)
+
+10 - https://github.com/Rezoneblock/glo-academy/tree/master/lesson_12-13-14/src (Знакомство с Gulp) (12,13,14,15 задание) (Знакомство с Git) (Знакомство с Gulp) (БЭМ) 
+
+(Препроцессоры в CSS) 
+
+3 - http://gordeevtimur.ru/extrahomework_3.1/src/ (задание на баллы)
+вторая часть - http://gordeevtimur.ru/extrahomework_3.2/src/
+
+4 - https://yadi.sk/d/aRlldZMz3rztTQ (задание на баллы)
