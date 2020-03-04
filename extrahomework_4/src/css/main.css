@@ -35,7 +35,7 @@ body, p, h1, h2, h3, h4 {
   color: #ff334d;
 }
 
-.section__title__underline {
+.section__underline {
   margin: 10px auto;
   width: 200px;
   height: 2px;
@@ -67,13 +67,13 @@ body, p, h1, h2, h3, h4 {
   background-color: white;
 }
 
-.main .sep h3 {
+.main h3 {
   font-size: 36px;
   font-weight: 300;
   color: #001e33;
 }
 
-.main .sep__location {
+.main__location {
   margin: 24px auto 21px;
   width: 300px;
   height: 64px;
@@ -83,7 +83,7 @@ body, p, h1, h2, h3, h4 {
   border: 1px solid #001e33;
 }
 
-.main .sep .commet {
+.main .commet {
   margin-top: 55px;
   color: darkgray;
   font-size: 14px;
@@ -117,14 +117,14 @@ body, p, h1, h2, h3, h4 {
   border-radius: 50%;
 }
 
-.problems__list__wrapper {
+.problems__wrapper {
   margin: 0 auto;
   padding: 30px;
   max-width: 700px;
   border: 2px solid #33aaff;
 }
 
-.problems__list__wrapper p {
+.problems__wrapper p {
   margin-bottom: 10px;
   font-size: 24px;
   color: #001e33;
