@@ -16,13 +16,13 @@ body{
 .container{
   margin: 0 auto;
 }
-.price__title{
+.title{
   font-size: 36px;
 }
 .span--block{
   display: block;
 }
-.price__description{
+.description{
   margin-top: 50px;
   margin-bottom: 100px;
 }
@@ -32,13 +32,13 @@ body{
   justify-content: center;
   list-style: none;
 }
-.products__item{
+.list__item{
   height: 750px;
   color: black;
   background-color: #ffffff;
   box-shadow: 0px 14px 21px 0px rgba(0, 0, 0, 0.17);
 }
-.prices img{
+.list img{
   width: 300px;
   height: 200px;
 }
@@ -47,18 +47,18 @@ body{
   max-width: 400px;
   margin-right: 40px;
 }
-.products__item img{
+.list__item img{
   max-width: 100%;
   width: 300px;
   height: 200px;
 }
-.products__item:nth-child(3){
+.list__item:nth-child(3){
   margin: 0;
 }
 .name{
   font-size: 20px;
 }
-.products__item__name{
+.list__name{
   margin: 50px 0 40px;
 }
 .price{
@@ -67,7 +67,7 @@ body{
 .price--big{
   font-size: 30px;
 }
-.products__item__price{
+.list__price{
   margin: 5% 0;
 }
 .includes{
@@ -93,16 +93,16 @@ body{
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
   text-transform: uppercase;
 }
-.products__item__button1{
+.list__button1{
   margin-top: 160px;
 }
-.products__item__button2{
+.list__button2{
   margin-top: 90px;
 }
-.products__item__button3{
+.list__button3{
   margin-top: 55px;
 }
-.services__item__button{
+.services__button{
   margin-top: 50px;
 }
 .services img{
