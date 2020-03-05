@@ -337,6 +337,9 @@ template {
 
 .header {
   position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   background-color: #131313;
   padding: 24px 0; }
 
@@ -363,6 +366,7 @@ template {
 
 .hero {
   postition: relative;
+  padding-top: 90px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }

@@ -432,7 +432,7 @@ template {
   left: 0;
   position: absolute;
   max-width: 80px;
-  height: 100%;
+  height: calc(100% - 90px);
 }
 
 .instagram {
@@ -458,6 +458,11 @@ template {
 
 .title {
   margin: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
