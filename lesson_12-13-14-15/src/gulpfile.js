@@ -3,6 +3,7 @@ const browserSync = require('browser-sync').create();
 const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const serveScss = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
 // Static server
  function bs() {
@@ -13,7 +14,8 @@ const serveScss = require('gulp-sass');
     }
   });
   watch("./*.html").on('change', browserSync.reload);
-  watch("./css/*.scss").on('change', browserSync.reload);
+  watch("./sass/*.scss").on('change', browserSync.reload);
+  watch("./sass/*.sass").on('change', browserSync.reload);
   watch("./js/*.js").on('change', browserSync.reload);
 };
 
@@ -28,8 +30,11 @@ function minifycss(done) {
 
 
 function serveSass() {
-  return src("../css/*.scss")
+  return src("./sass/**/*.sass", ".scss/**/*.scss")
     .pipe(serveScss())
+    .pipe(autoprefixer({
+      cascade: false
+    }))
     .pipe(dest("app/css"))
     .pipe(browserSync.stream());
 };
