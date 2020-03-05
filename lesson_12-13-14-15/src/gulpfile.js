@@ -14,8 +14,8 @@ const autoprefixer = require('gulp-autoprefixer');
     }
   });
   watch("./*.html").on('change', browserSync.reload);
-  watch("./sass/*.scss").on('change', browserSync.reload);
-  watch("./sass/*.sass").on('change', browserSync.reload);
+  watch("./sass/**/*.scss").on('change', browserSync.reload);
+  watch("./sass/**/*.sass").on('change', browserSync.reload);
   watch("./js/*.js").on('change', browserSync.reload);
 };
 
