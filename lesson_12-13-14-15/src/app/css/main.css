@@ -364,7 +364,8 @@ template {
   margin-right: 40px; }
 
 .phone {
-  color: #E3B873; }
+  color: #E3B873;
+  margin-right: 50px; }
 
 .contacts {
   margin-right: 45px; }
@@ -383,6 +384,8 @@ template {
   .hero__text {
     font-size: 22px;
     max-width: 500px; }
+  .hero__button {
+    margin-right: 20px; }
   .hero__instagram {
     left: 0;
     position: absolute;
