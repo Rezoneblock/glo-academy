@@ -401,6 +401,42 @@ template {
           animation: show 2s ease 2s infinite;
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Futura Book', sans-serif;
+  font-size: 14px;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive;
+}
+
+.section-title__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-title__image::before, .section-title__image::after {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background-color: #E3B873;
+  margin: 0 10px;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -408,6 +444,7 @@ template {
   width: 100%;
   background-color: #131313;
   padding: 24px 0;
+  z-index: 99;
 }
 
 .menu {
@@ -470,8 +507,10 @@ template {
 .hero::before {
   content: '';
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: calc(100% - 90px);
+  height: 100%;
   background-color: rgba(19, 19, 19, 0.7);
 }
 
@@ -573,15 +612,5 @@ template {
 
 .title--primary {
   color: #E3B873;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: 'Futura Book', sans-serif;
-  font-size: 14px;
 }
 /*# sourceMappingURL=main.css.map */
