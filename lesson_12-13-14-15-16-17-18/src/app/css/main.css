@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/futura/futuraBookC.woff") format("woff"), url("../fonts/futura/futuraBookC.woff2") format("woff2");
@@ -319,11 +320,11 @@ template {
   display: none; }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 22px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem; }
+  font-size: 0.965rem; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -372,7 +373,146 @@ body {
       background-color: #E3B873;
       margin: 0 10px; }
 
-@media screen and (max-width: 1300px) {
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #131313;
+  padding: 24px 0;
+  z-index: 99; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  color: #E3B873;
+  text-transform: uppercase;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.6px; }
+
+.menu__logo {
+  margin-right: 5px; }
+
+.nav__item {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 2.5rem;
+  transition: color 0.2s;
+  font-weight: 300; }
+  .nav__item:hover {
+    color: #E3B873; }
+
+.phone {
+  color: #E3B873; }
+
+.contacts__phone {
+  margin-right: 3rem;
+  font-weight: 600; }
+
+.hero {
+  postition: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 90px;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #fff; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.7); }
+  .hero__content {
+    position: relative;
+    max-width: 47.85rem;
+    margin-left: 4.28rem; }
+  .hero__title {
+    margin-bottom: 1rem !important;
+    font-size: 40зч; }
+  .hero__text {
+    line-height: 1.4;
+    font-size: 1.57rem;
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 3.2rem; }
+  .hero__button {
+    margin-right: 15px;
+    padding: 19px 26px; }
+    .hero__button--outline {
+      padding: 17px 40px;
+      letter-spacing: 0.4px; }
+  .hero__instagram {
+    top: 0;
+    left: 0;
+    position: absolute;
+    max-width: 80px;
+    height: 100%; }
+  .hero__scroll-down {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    left: 0;
+    bottom: 0;
+    min-width: 17.6rem;
+    min-height: 6.92rem;
+    background-color: #131313;
+    font-family: Yeseva One;
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #fff; }
+    .hero__scroll-down::after {
+      content: '';
+      background: url("../img/arrow-down.svg") no-repeat center;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #E3B873;
+      border-radius: 50%;
+      margin-left: 17px; }
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313; }
+  .instagram__link {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #E3B873;
+    transform: rotate(90deg);
+    line-height: 0.8px;
+    font-size: 1.1rem; }
+    .instagram__link::after {
+      content: '';
+      width: 50px;
+      height: 1px;
+      background-color: #E3B873;
+      margin-left: 8px; }
+
+.title {
+  margin: 0;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 2.857rem;
+  font-weight: normal;
+  line-height: 1.3; }
+  .title--primary {
+    color: #E3B873; }
+
+@media screen and (max-width: 1349px) {
   html {
     font-size: 12px; }
   .nav__item {
@@ -408,120 +548,3 @@ body {
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
     display: none !important; } }
-
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  background-color: #131313;
-  padding: 24px 0;
-  z-index: 99; }
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.logo {
-  color: #E3B873;
-  text-transform: uppercase;
-  font-size: 1.075rem; }
-
-.nav__item {
-  text-transform: uppercase;
-  color: #fff;
-  text-decoration: none;
-  margin-right: 2.85rem;
-  transition: color 0.2s; }
-  .nav__item:hover {
-    color: #E3B873; }
-
-.phone {
-  color: #E3B873; }
-
-.contacts__phone {
-  margin-right: 3.57rem; }
-
-.hero {
-  postition: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 90px;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
-  height: 100vh;
-  color: #fff; }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(19, 19, 19, 0.7); }
-  .hero__content {
-    position: relative;
-    max-width: 47.85rem;
-    margin-left: 4.28rem; }
-  .hero__text {
-    font-size: 1.57rem;
-    max-width: 500px; }
-  .hero__button {
-    margin-right: 20px; }
-  .hero__instagram {
-    top: 0;
-    left: 0;
-    position: absolute;
-    max-width: 80px;
-    height: 100%; }
-  .hero__scroll-down {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    left: 0;
-    bottom: 0;
-    min-width: 17.6rem;
-    min-height: 6.92rem;
-    background-color: #131313;
-    color: #fff; }
-    .hero__scroll-down::after {
-      content: '';
-      background: url("../img/arrow-down.svg") no-repeat center;
-      width: 30px;
-      height: 30px;
-      border: 2px solid #E3B873;
-      border-radius: 50%;
-      margin-left: 12px; }
-
-.instagram {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #131313; }
-  .instagram__link {
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #E3B873;
-    transform: rotate(90deg);
-    line-height: 0.8px; }
-    .instagram__link::after {
-      content: '';
-      width: 50px;
-      height: 1px;
-      background-color: #E3B873;
-      margin-left: 8px; }
-
-.title {
-  margin: 0;
-  font-family: 'Yeseva One', cursive;
-  text-transform: uppercase;
-  font-size: 2.857rem;
-  font-weight: normal; }
-  .title--primary {
-    color: #E3B873; }
