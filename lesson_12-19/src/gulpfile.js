@@ -27,7 +27,7 @@ function serveSass() {
     .pipe(autoprefixer({
       cascade: false
     }))
-    .pipe(dest("app/css"))
+    .pipe(dest("css"))
     .pipe(browserSync.stream());
 };
 
