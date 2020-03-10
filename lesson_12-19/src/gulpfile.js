@@ -4,6 +4,7 @@ const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const serveScss = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+let cleanCSS = require('gulp-clean-css');
 
 // Static server
  function bs() {
@@ -20,15 +21,6 @@ const autoprefixer = require('gulp-autoprefixer');
 };
 
 
-function minifycss(done) {
-  gulp.src('css/main.css')
-    .pipe(cssmin())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('css/'));
-    done();
-};
-
-
 function serveSass() {
   return src("./sass/**/*.sass", ".scss/**/*.scss")
     .pipe(serveScss())
@@ -40,4 +32,15 @@ function serveSass() {
 };
 
 
+function minifycss (done) {
+  src('css/main.css')
+    .pipe(cssmin())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest('css'));
+    done();
+};
+
+
+
 exports.serve = bs;
+exports.minifycss = minifycss;
