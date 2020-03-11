@@ -772,10 +772,11 @@ img {
 .projects .description {
   text-transform: none;
   max-width: 53rem;
-  font-family: 'FuturaBookC', cursive;
-  font-size: 1.2rem;
-  line-height: 1.928rem;
-  font-weight: 400;
+  font-family: 'Futura Book';
+  font-size: 1.428rem;
+  line-height: 1.93rem;
+  font-weight: normal;
+  color: #363636;
 }
 
 @media screen and (max-width: 1349px) {
