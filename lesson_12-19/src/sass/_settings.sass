@@ -20,19 +20,19 @@ img
     font-family: 'Yeseva One', cursive
     &__heading
       font-size: 1.43rem
+      font-weight: 400
     &__image
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    &__desctiprion
-      font-size: 20px;
-      line-height: 27px;
       &::before, &::after
-        content: ''
-        width: 32px
-        height: 2px
-        background-color: $primary
-        margin: 0 10px;
+       display: inline-block
+       vertical-align: text-top
+       content: ''
+       width: 32px
+       height: 2px
+       background-color: $primary
+       margin: 0 10px;
+    &__description
+      font-size: 12px;
+      line-height: 27px;
 
 
 

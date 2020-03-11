@@ -436,31 +436,22 @@ img {
 
 .section-title__heading {
   font-size: 1.43rem;
+  font-weight: 400;
 }
 
-.section-title__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.section-title__desctiprion {
-  font-size: 20px;
-  line-height: 27px;
-}
-
-.section-title__desctiprion::before, .section-title__desctiprion::after {
+.section-title__image::before, .section-title__image::after {
+  display: inline-block;
+  vertical-align: text-top;
   content: '';
   width: 32px;
   height: 2px;
   background-color: #E3B873;
   margin: 0 10px;
+}
+
+.section-title__description {
+  font-size: 12px;
+  line-height: 27px;
 }
 
 .header {
@@ -726,6 +717,7 @@ img {
 .card__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.28rem;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 0.7rem;
 }
@@ -745,6 +737,7 @@ img {
   left: 0;
   bottom: -1.79rem;
   font-size: 1.29rem;
+  font-weight: 400;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   background-color: #E3B873;
@@ -768,7 +761,7 @@ img {
 }
 
 .projects-title__image {
-  margin-bottom: 1.71rem;
+  margin-bottom: 1.2rem;
 }
 
 .projects-title__heading {
@@ -777,8 +770,12 @@ img {
 }
 
 .projects .description {
-  max-width: 54rem;
+  text-transform: none;
+  max-width: 53rem;
+  font-family: 'FuturaBookC', cursive;
+  font-size: 1.2rem;
   line-height: 1.928rem;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 1349px) {
@@ -839,6 +836,11 @@ img {
   .title {
     font-size: 1.64rem !important;
   }
+  .hero {
+    position: relative;
+    padding-top: 12.5rem;
+    height: 100%;
+  }
   .hero__scroll-down {
     display: none !important;
   }
@@ -846,6 +848,7 @@ img {
     max-width: 22.86rem !important;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 4.357rem;
   }
   .hero__text {
     font-size: 1.29rem !important;
@@ -854,7 +857,12 @@ img {
   .hero__button {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem;
+  }
+  .hero .button--ouline {
+    margin-bottom: 4.357rem;
+  }
+  .hero .button--primary {
+    margin-bottom: 1.857rem;
   }
 }
 
