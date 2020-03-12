@@ -36,6 +36,9 @@ body{
 label{
   margin-left: 1.5px;
 }
+.star{
+  color: #01c4c4;
+}
 input{
   border: 1px solid #cfdede;
   padding: 7px 12px;
