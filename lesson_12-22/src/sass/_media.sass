@@ -30,10 +30,41 @@
     margin-right: 0
 
 
-@media screen and ( max-width:  760px )
+@media screen and ( max-width:  860px )
+  .projects
+    .swiper
+      &__buttons
+       margin-left: 20%
+
+       
+
+
+
+
+  .section  
+   &-title
+    text-align: center
+    min-width: 305px
+    &__heading
+      order: 1
+    &__text
+      max-width: inherit
+    &__word
+      display: block
+      &::after
+        display: none
   .row
     flex-direction: column
     align-items: center
+    .col-100
+      width: 100%
+      align-items: center
+      &:last-of-type
+        position: relative
+        order: 1
+        max-height: 460px
+      &:first-of-type
+        order: 2
   .types
     &__card
       margin-bottom: 5rem
@@ -72,12 +103,30 @@
     .button--primary
       margin-bottom: 1.857rem
 
+  .row
+   .col-100
+     &:last-of-type
+        max-height: 310px
+
+
+@media screen and ( max-width: 375px )
+  .row
+   .col-100
+     &:last-of-type
+        max-height: 230px
+
+
+
+
+
 
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
       display: none !important
-  
+
+
+
 
   
 

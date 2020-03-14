@@ -1,14 +1,27 @@
 .projects
-  &__section-title
+  padding: 130px 0
+  .col
+    &-100
+      &:last-of-type
+        position: absolute
+        right: 0
+        top: 0
+  .container
+    position: relative
+  .section-title
     &__heading
       font-size: 1.75rem
       line-height: 2.642rem
-  &__swiper-slide
-    &__text
-      
+      margin: 0
+
+
 
 
 .swiper
+  &__buttons
+    display: flex
+    position: relative
+    height: 10px
   &-wrapper
     margin-bottom: 7.4rem
   &-slide
@@ -30,6 +43,7 @@
       line-height: 1.428rem
   &-pagination
     &-bullet
+      margin: 0 0.65rem
       background-color: rgba($light, 0.3)
       width: 0.683rem
       height: 0.683rem
@@ -37,7 +51,7 @@
         background-color: $light
   &-button
     &-prev, &-next
-      bottom: 0
+      bottom: -2px
       top: auto
       background-size: 42px
       width: 42px
@@ -54,7 +68,7 @@
 
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
-  bottom: 0
+  bottom: 30px
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
   margin: 0 0.65rem
 
