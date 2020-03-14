@@ -923,6 +923,12 @@ img {
       align-self: flex-end;
 }
 
+@media screen and (max-width: 1600px) {
+  #button-up {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 1349px) {
   html {
     font-size: 12px !important;
@@ -1015,5 +1021,25 @@ img {
   .hero__scroll-down {
     display: none !important;
   }
+}
+
+#button-up {
+  display: none;
+  right: 50px;
+  margin: 0;
+  position: fixed;
+  bottom: 50px;
+  outline: none;
+  width: 100px;
+  color: #333333;
+  line-height: 30px;
+  font-family: 'Futura Demi', cursive;
+  text-decoration: none;
+  padding: 0 0 0 28px;
+  background: url(../images/icon-arrow-black-up.jpg) no-repeat 7px 11px #ffffff;
+  border-radius: 0 4px 4px 0;
+  -webkit-box-shadow: 0 2px 4px #999;
+          box-shadow: 0 2px 4px #999;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

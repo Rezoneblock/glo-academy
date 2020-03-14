@@ -1,31 +1,50 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-  const modal = document.querySelector('.modal');
-  const page = document.querySelector('.hero');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  }
+$(document).ready(function () {
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close');
+      
 
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
+      modalBtn.on('click', function () {
+        modal.toggleClass('modal--visible');
+      });
+      closeBtn.on('click', function () {
+        modal.toggleClass('modal--visible');
+      });
+      $(document).on('click', function (event) {
+        if ($(event.target).is('.modal')) {
+          modal.toggleClass('modal--visible');
+        }
+      });
+      $(document).keydown(function (event) {
+        if (event.keyCode === 27) {
+          if (modal.hasClass('modal--visible')) {
+            modal.toggleClass('modal--visible');
+          }
+        };
+      });
+});
+
+$(document).ready(function () {
+  /**
+   * При прокрутке страницы, показываем или срываем кнопку
+   */
+  $(window).scroll(function () {
+    // Если отступ сверху больше 50px то показываем кнопку "Наверх"
+    if ($(this).scrollTop() > 50) {
+      $('#button-up').fadeIn();
+    } else {
+      $('#button-up').fadeOut();
+    }
   });
 
-  closeBtn.addEventListener('click', switchModal);
+  /** При нажатии на кнопку мы перемещаемся к началу страницы */
+  $('#button-up').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
 
-  window.onclick = (event) => {
-    if (event.target == modal) {
-      modal.classList.remove('modal--visible');
-    }
-  }
-
-  window.addEventListener('keydown', (event) => {
-    if (event.keyCode === 27) {
-      if (modal.classList.contains('modal--visible')) {
-        modal.classList.toggle('modal--visible');
-      }
-    }
-  })
+});
 
 
-})
