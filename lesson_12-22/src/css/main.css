@@ -1113,11 +1113,7 @@ img {
 }
 
 @media screen and (max-width: 860px) {
-  .projects .swiper__buttons {
-    margin-left: 20%;
-  }
   .section-title {
-    text-align: center;
     min-width: 305px;
   }
   .section-title__heading {
@@ -1151,15 +1147,7 @@ img {
   }
   .row .col-100:last-of-type {
     position: relative;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    max-height: 460px;
-  }
-  .row .col-100:first-of-type {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    margin-top: 40px;
   }
   .types__card {
     margin-bottom: 5rem;
@@ -1206,15 +1194,6 @@ img {
   }
   .hero .button--primary {
     margin-bottom: 1.857rem;
-  }
-  .row .col-100:last-of-type {
-    max-height: 310px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .row .col-100:last-of-type {
-    max-height: 230px;
   }
 }
 
