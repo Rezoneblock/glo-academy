@@ -82,32 +82,61 @@ $(document).ready(function () {
       },
     })  
 
-  $('.steps__swiper-button-next').on('click', function() {
-    var id = $('.item--active').attr('id')
-    $('.steps__swiper-menu__item').removeClass('item--active');
-    var activeId = parseInt(id) + 1;
-    if (activeId == 7) {
-      activeId = 1;
-    }
-    $('#' + activeId).addClass('item--active');
-  })
 
+    /*<-- working next button --> */
+  $('.steps__swiper-button-next').on('click', function () {
+    var itemId = $('.item--active').attr('id')
+    var bulletId = $('.bullet--active').attr('id');
+    $('.bullet').removeClass('bullet--active');
+    $('.bullet').removeClass('item--active');
+    $('.steps__swiper-menu__item').removeClass('item--active');
+    $('.steps__swiper-menu__item').removeClass('bullet--active');
+    var activeItemId = parseInt(itemId) + 1;
+    var activeBulletId = parseInt(bulletId) + 1;
+    if (activeItemId == 7) {
+      activeItemId = 1;
+    }
+    if (activeBulletId == 13) {
+      activeBulletId = 7;
+    }
+    $('#' + activeItemId).addClass('item--active');
+    $('#' + activeBulletId).addClass('bullet--active');
+  })
+/*--------------------------------*/
+
+/*<-- working prev button --> */
   $('.steps__swiper-button-prev').on('click', function () {
-    var id = $('.item--active').attr('id')
+    var itemId = $('.item--active').attr('id')
+    var bulletId = $('.bullet--active').attr('id');
+    $('.bullet').removeClass('bullet--active');
+    $('.bullet').removeClass('item--active');
     $('.steps__swiper-menu__item').removeClass('item--active');
-    var activeId = parseInt(id) - 1;
-    if (activeId == 0) {
-      activeId = 6;
+    $('.steps__swiper-menu__item').removeClass('bullet--active');
+    var activeItemId = parseInt(itemId) - 1;
+    var activeBulletId = parseInt(bulletId) - 1;
+    if (activeItemId == 0) {
+      activeItemId = 6;
     }
-    $('#' + activeId).addClass('item--active');
+    if (activeBulletId == 6) {
+      activeBulletId = 12;
+    }
+    $('#' + activeItemId).addClass('item--active');
+    $('#' + activeBulletId).addClass('bullet--active');
   })
+/*--------------------------------*/
 
+/*<-- working menu button --> */
   $('.steps__swiper-menu__item').on('click', function () {
     var index = $(this).index()
     mySwiper2[2].slideTo(index + 1);
     $('.steps__swiper-menu__item').removeClass('item--active');
     $(this).addClass('item--active');
+    $('.bullet').removeClass('bullet--active')
+    var id = $('.item--active').attr('id')
+    var bulletId = parseInt(id) + 6;
+    $('#' + bulletId).addClass('bullet--active')
   });
+/*--------------------------------*/
 
     var next = $('.swiper-button-next');
     var prev = $('.swiper-button-prev');

@@ -23,9 +23,22 @@
         font-size: 1.071rem
         line-height: 1.785rem
   &__swiper
-    &-image
-      margin-left: 100px
-      width: 85%
+    &-bullets
+      display: flex
+      flex-direction: row
+      span
+        transition: .5s
+        width: 10px
+        height: 10px
+        background-color: $light
+        border-radius: 50%
+        margin-right: 17px
+        opacity: .5
+        &:first-of-type
+          margin-left: 17px
+
+    &-images
+      margin-left: 50px
     &-menu
       margin-top: 90px
       margin-left: 100px
@@ -38,12 +51,22 @@
         font-family: 'Futura Book'
         font-weight: normal
       &__number
+        position: relative
         display: block
         font-size: 1.071rem
         line-height: 1.5rem
         font-weight: normal
         text-transform: uppercase
         margin-bottom: 12px
+        width: 18px
+        &::after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 1px
+          background-color: $primary
       &__item
         width: 33%
         transition: .5s
@@ -66,7 +89,6 @@
       &-prev
         background: url('../img/arrow-prev.svg') no-repeat center
       &-next
-        margin-left: 50px
         background: url('../img/arrow-next.svg') no-repeat center
     &-pagination
       &-bullet
@@ -102,5 +124,5 @@
       &::after
         margin-left: 90px
 
-.item--active
-  opacity: 1
+.item--active, .bullet--active
+  opacity: 1 !important
