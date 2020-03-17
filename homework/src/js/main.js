@@ -31,3 +31,11 @@ $(function () {
     });
   }
 });
+
+$(function () {
+  $('.face2').each(function(indx, el) {
+    if($('.face2__link', el).length >= 2) {
+      $('.face2__link', el).css("cssText", "margin-top: 0");
+    };
+  });
+})
