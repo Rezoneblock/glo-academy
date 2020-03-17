@@ -40,9 +40,6 @@
     display: none
   .section  
    &-title
-    min-width: 305px
-    &__heading
-      order: 1
     &__text
       max-width: inherit
     &__word
@@ -99,11 +96,21 @@
       margin-bottom: 4.357rem
     .button--primary
       margin-bottom: 1.857rem
+  .swiper
+    &-slide
+      &__text
+        margin-right: 50px
+        &:nth-child(even)
+          margin-right: 0
 
 
 
 
-// @media screen and ( max-width: 375px )
+@media screen and ( max-width: 300px )
+  .hero
+    &__button
+      min-width: 1px 
+        
 
 
 

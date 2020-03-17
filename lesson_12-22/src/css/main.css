@@ -943,7 +943,7 @@ img {
 
 .swiper-pagination-bullet {
   margin: 0 0.65rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background: #fff;
   width: 0.683rem;
   height: 0.683rem;
 }
@@ -1125,6 +1125,7 @@ img {
   font-family: 'Futura Book';
   font-size: 1.071rem;
   line-height: 1.785rem;
+  margin-bottom: 60px;
 }
 
 .steps__swiper-bullets {
@@ -1333,14 +1334,6 @@ img {
   .steps {
     display: none;
   }
-  .section-title {
-    min-width: 305px;
-  }
-  .section-title__heading {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
   .section-title__text {
     max-width: inherit;
   }
@@ -1418,6 +1411,18 @@ img {
   }
   .hero .button--primary {
     margin-bottom: 1.857rem;
+  }
+  .swiper-slide__text {
+    margin-right: 50px;
+  }
+  .swiper-slide__text:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .hero__button {
+    min-width: 1px;
   }
 }
 

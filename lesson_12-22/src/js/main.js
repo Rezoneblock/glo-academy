@@ -58,19 +58,30 @@ $(document).ready(function () {
 
 
 /* <--    Slider's     --> */
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('#slider-first', {
       loop: true,
       pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
+        el: ('#pagination1' ),
+        type: ('bullets' ),
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '#next1',
+        prevEl: '#prev1',
+      },
+    })
+    var mySwiper = new Swiper('#slider-first-second', {
+      loop: true,
+      pagination: {
+        el: ('#pagination1'),
+        type: ('bullets'),
+      },
+      navigation: {
+        nextEl: '#next1',
+        prevEl: '#prev1',
       },
     })
 
-    var mySwiper2 = new Swiper('.swiper-container', {
+    var mySwiper2 = new Swiper('#slider-second', {
       loop: true,
       pagination: {
         el: ('.steps__swiper-fraction'),
@@ -81,6 +92,23 @@ $(document).ready(function () {
         prevEl: ('.steps__swiper-button-prev'),
       },
     })  
+    console.log(mySwiper2);
+    console.log(mySwiper2);
+
+
+
+    /*<-- working menu button --> */
+    $('.steps__swiper-menu__item').on('click', function () {
+      var index = $(this).index()
+      mySwiper2.slideTo(index + 1);
+      $('.steps__swiper-menu__item').removeClass('item--active');
+      $(this).addClass('item--active');
+      $('.bullet').removeClass('bullet--active')
+      var id = $('.item--active').attr('id')
+      var bulletId = parseInt(id) + 6;
+      $('#' + bulletId).addClass('bullet--active')
+    });
+    /*--------------------------------*/
 
 
     /*<-- working next button --> */
@@ -125,18 +153,6 @@ $(document).ready(function () {
   })
 /*--------------------------------*/
 
-/*<-- working menu button --> */
-  $('.steps__swiper-menu__item').on('click', function () {
-    var index = $(this).index()
-    mySwiper2[2].slideTo(index + 1);
-    $('.steps__swiper-menu__item').removeClass('item--active');
-    $(this).addClass('item--active');
-    $('.bullet').removeClass('bullet--active')
-    var id = $('.item--active').attr('id')
-    var bulletId = parseInt(id) + 6;
-    $('#' + bulletId).addClass('bullet--active')
-  });
-/*--------------------------------*/
 
     var next = $('.swiper-button-next');
     var prev = $('.swiper-button-prev');
