@@ -92,8 +92,6 @@ $(document).ready(function () {
         prevEl: ('.steps__swiper-button-prev'),
       },
     })  
-    console.log(mySwiper2);
-    console.log(mySwiper2);
 
 
 
@@ -164,6 +162,8 @@ $(document).ready(function () {
 
 /*-------------------------*/
 
+
+/*<-- Animation  --> */
   new WOW().init();
 
   $(window).scroll(function () {
@@ -183,8 +183,47 @@ $(document).ready(function () {
       control.removeClass('opacity0');
     }
   });
+/*<--            --> */
 
 
+
+
+   // form validation
+   $('.modal__form').validate({
+     errorClass: "invalid",
+     rules: {
+       // required 
+       userName: {
+         required: true,
+         minlength: 2,
+         maxlength: 15
+       },
+       userPhone: "required",
+       // required group
+       userEmail: {
+         required: true,
+         email: true
+       }
+     },
+     // error massages
+     messages: {
+       userName: {
+         required: "Заполните поле",
+         minlength: "Имя не короче 2 букв",
+         maxlength: "Имя должно быть короче 15 букв"
+       }, 
+       userPhone: "Заполните поле",
+       userEmail: {
+         required: "Заполните поле",
+         email: "Введите корректный email"
+       }
+     }
+
+   });
+
+
+   //mask for telephone
+   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
 });
 
