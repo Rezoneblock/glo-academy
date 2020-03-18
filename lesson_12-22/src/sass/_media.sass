@@ -58,7 +58,21 @@
       &:first-of-type
   .types
     &__card
-      margin-bottom: 5rem
+      margin: 5rem auto
+  .types, .project, .team 
+    .col-100
+      display: flex
+      flex-direction: column
+      justify-content: center
+  .team
+    &__card
+      margin-bottom: 8rem
+    .col-100
+      &:last-of-type
+        margin-top: 0
+  .control
+    &__video
+      min-height: 300px
   .card
     &__text
       margin-left: 0
@@ -66,8 +80,38 @@
     padding: 0
     margin: 0
 
+@media screen and ( max-width:  666px )
+  .control
+    &__video
+      min-height: 200px
+      margin-bottom: 6rem
 
 @media screen and ( max-width:  576px )
+  .control
+    background-color: $dark
+    color: $light
+    &__input-group
+      flex-basis: 100%
+      margin-bottom: 4.5rem
+    &__button
+      margin-bottom: -20px
+      width: 100%
+      order: 5
+    &__policy
+      margin-top: -60px
+  .project
+    background-color: $dark
+    &-title
+      color: $light
+      &__description
+        color: $light
+  .team
+    &__section-title
+      color: $light
+      &__description
+        color: $light
+  
+
   .contacts
     &__phone
       margin-right: 0 !important
@@ -103,6 +147,12 @@
         &:nth-child(even)
           margin-right: 0
 
+
+
+@media screen and ( max-width: 424px ) 
+  .footer
+    &__input-group
+      flex-basis: 100%
 
 
 
