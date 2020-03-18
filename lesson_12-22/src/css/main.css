@@ -357,6 +357,87 @@ template {
   display: none;
 }
 
+.slider-title-animation {
+  -webkit-animation: sliderTitle 2s ease;
+          animation: sliderTitle 2s ease;
+}
+
+@-webkit-keyframes sliderTitle {
+  from {
+    margin-left: -500px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes sliderTitle {
+  from {
+    margin-left: -500px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+.buttons-animation {
+  -webkit-animation: buttons 2s ease;
+          animation: buttons 2s ease;
+}
+
+@-webkit-keyframes buttons {
+  from {
+    margin-left: 300px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes buttons {
+  from {
+    margin-left: 300px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.control-animations {
+  -webkit-animation: control 2s ease;
+          animation: control 2s ease;
+}
+
+@-webkit-keyframes control {
+  from {
+    margin-top: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes control {
+  from {
+    margin-top: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
 .button {
   padding: 11px 22px;
   border: none;
@@ -408,19 +489,19 @@ template {
   padding: 0.5rem 0;
 }
 
-.input::-webkit-input-placeholder {
+.input--light::-webkit-input-placeholder {
   color: #fff;
 }
 
-.input:-ms-input-placeholder {
+.input--light:-ms-input-placeholder {
   color: #fff;
 }
 
-.input::-ms-input-placeholder {
+.input--light::-ms-input-placeholder {
   color: #fff;
 }
 
-.input::placeholder {
+.input--light::placeholder {
   color: #fff;
 }
 
@@ -518,6 +599,10 @@ img {
   max-width: 100%;
 }
 
+.opacity0 {
+  opacity: 0;
+}
+
 .section--dark {
   background-color: #131313;
   color: #fff;
@@ -525,6 +610,10 @@ img {
 
 .section-title {
   text-align: center;
+}
+
+.section-title--light {
+  color: #fff;
 }
 
 .section-title--left {
@@ -825,8 +914,101 @@ img {
   color: #E3B873;
 }
 
-.control-title__heading {
-  color: #131313;
+.control__section-title {
+  margin-bottom: 2.214rem;
+  margin-top: -30rem;
+}
+
+.control__video {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin-bottom: 4.428rem;
+  max-width: 58.375rem;
+  min-height: 31rem;
+  background: #131313 url("../img/video-mask.jpg") center no-repeat;
+  -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.control__video::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.control__text {
+  max-width: 40.785rem;
+  margin: auto;
+  margin-bottom: 4.285rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.4rem;
+}
+
+.control__text::before {
+  content: '';
+  display: block;
+  margin: auto;
+  margin-bottom: 2.5rem;
+  width: 55px;
+  height: 2px;
+  background-color: #E3B873;
+  border-radius: 30px;
+}
+
+.control__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto;
+}
+
+.control__input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.control__label {
+  margin-bottom: -6px;
+}
+
+.control__button {
+  padding: 1.2857rem 4.785rem;
+}
+
+.control__policy {
+  margin-top: 1.2rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.control__policy-label {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.video__play {
+  position: relative;
+  margin: auto;
 }
 
 .types__section-title {
@@ -881,7 +1063,7 @@ img {
 }
 
 .projects {
-  padding: 130px 0;
+  padding-bottom: 30rem;
 }
 
 .projects .col-100:last-of-type {
@@ -905,7 +1087,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  height: 12px;
+  min-height: 12px;
 }
 
 .swiper-wrapper {

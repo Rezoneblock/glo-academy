@@ -164,6 +164,27 @@ $(document).ready(function () {
 
 /*-------------------------*/
 
+  new WOW().init();
+
+  $(window).scroll(function () {
+    var title1 = $('.projects__section-title');
+    if ($(this).scrollTop() > title1.offset().top - 900) {
+      title1.addClass('slider-title-animation');
+      title1.removeClass('opacity0');
+    }
+    var buttons = $('.buttons');
+    if ($(this).scrollTop() > buttons.offset().top - 1100) {
+      buttons.addClass('buttons-animation');
+      buttons.removeClass('opacity0');
+    }
+    var control = $('.control-animation');
+    if ($(this).scrollTop() > control.offset().top - 800) {
+      control.addClass('control-animations');
+      control.removeClass('opacity0');
+    }
+  });
+
+
 
 });
 
