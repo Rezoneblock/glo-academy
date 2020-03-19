@@ -18,7 +18,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f7efef;
+  background: #232729;
   border-radius: 5px;
 }
 
@@ -67,8 +67,23 @@ body {
 
 
 .hero{
-  padding-top: 800px;
+  padding-top: 700px;
   padding-bottom: 2000px;
+  &__scroll-down{
+    margin-top: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-fill-mode: forwards;
+    &__title{
+      font-size: 50px;
+      color: black;
+      font-weight: bold;
+    }
+    img{
+      height: 200px;
+    }
+  }
   &__title{
     display: flex;
     flex-direction: column;
@@ -109,12 +124,59 @@ body {
 
 
 .works {
-  padding-bottom: 800px;
+  padding-bottom: 100px;
+  .container{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 30px;
+      background-color: #333;
+      border-top-left-radius: 25px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 30px;
+      background-color: #333;
+      border-top-right-radius: 25px;
+    }
+  }
+  &__title{
+    text-shadow: 0 1px 0 #333,
+    0 2px 0 #007bff,
+    0 3px 0 #007bff,
+    0 4px 0 #007bff,
+    0 5px 0 #007bff,
+    0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 50px;
+    h2{
+      font-size: 60px;
+      background-color: #333;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 5px;
+    }
+  }
   &__cards{
     list-style: none;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: 30px solid #333;
     &-item{
       width: 33%;
       height: 300px;
@@ -122,6 +184,9 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      &:last-of-type{
+        margin: 0 auto;
+      }
       .face1{
         position: relative;
         display: flex;
@@ -176,7 +241,7 @@ body {
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: red;
+            background-color: green;
             opacity: 0;
             transition: .5s;
             transform: translateY(5px);
@@ -188,7 +253,7 @@ body {
         }
         &__link a{
           text-decoration: none;
-          color: red;
+          color: green;
           font-weight: bold;
         }
       }
@@ -210,6 +275,7 @@ body {
 
 .closed{
   .face1{
+    cursor: default;
     background-color: red;
     &__header{
       color: #fff;
@@ -219,6 +285,10 @@ body {
     }
   }
   .face2{
+    &__link a{
+      cursor: default;
+      color: red;
+    }
     &__link{
       &::after{
         display: none;
@@ -226,6 +296,75 @@ body {
     }
   }
 }
+
+.inprogress{
+  .face1 {
+    background-color: orange;
+    }
+    &__header {
+      color: #fff;
+    }
+
+    &__image {
+      margin-top: 50px;
+    }
+
+  .face2 {
+    &__link a{
+      color: orange;
+    }
+    &__link {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.extraworks{
+  margin-top: 100px;
+  &__title{
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 1px 0 #333,
+    0 2px 0 gold,
+    0 3px 0 gold,
+    0 4px 0 gold,
+    0 5px 0 gold,
+    0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+    h2 {
+      margin: 0 50px;
+      color: gold;
+      font-size: 60px;
+    }
+    img {
+      height: 50px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

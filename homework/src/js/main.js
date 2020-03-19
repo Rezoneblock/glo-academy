@@ -39,3 +39,18 @@ $(function () {
     };
   });
 })
+
+
+$(function () {
+  new WOW().init();
+})
+
+
+//  $(window).scroll(function () {
+//    var before = $('.');
+//    if ($(this).scrollTop() > title1.offset().top - 900) {
+//      title1.addClass('slider-title-animation');
+//      title1.removeClass('opacity0');
+//    }
+//  });
+

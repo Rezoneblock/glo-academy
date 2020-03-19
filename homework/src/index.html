@@ -6,8 +6,9 @@
   <title>Homework</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/main.min.css"> -->
 </head>
 <body>
   <div class="feature"></div>
@@ -17,8 +18,12 @@
     <section class="hero">
       <div class="container">
         <div class="hero__title">
-          <h1 class="hero__title__heading"><a href="https://vk.com/timur_gordeev">Гордеев Тимур</a></h1>
-          <span class="hero__title__subtitle">Ученик <a href="https://vk.com/glo_academy" class="link">Glo Academy</a></span>
+          <h1 class="hero__title__heading wow zoomInDown"><a href="https://vk.com/timur_gordeev">Гордеев Тимур</a></h1>
+          <span class="hero__title__subtitle wow zoomInDown" data-wow-delay=".2s">Ученик <a href="https://vk.com/glo_academy" class="link">Glo Academy</a></span>
+        </div>
+        <div class="hero__scroll-down wow fadeOutDown" data-wow-iteration="3" data-wow-duration="1.5s">
+          <h2 class="hero__scroll-down__title">медленно</h2>
+          <img src="img/scroll.svg" alt="">
         </div>
       </div>
     </section>
@@ -26,8 +31,11 @@
 
     <section class="works">
       <div class="container">
+        <div class="works__title wow fadeInDown">
+          <h2>Задания</h2>
+        </div>
         <ul class="works__cards">
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/1.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Этапы создания сайтов</span>
@@ -37,7 +45,7 @@
               <span class="face2__link"><a href="https://wireframe.cc/tNrvuL" class="link">Доп. ссылка</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/2.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Работа с графикой</span>
@@ -46,7 +54,7 @@
               <span class="face2__link"><a href="https://yadi.sk/d/t8nCp7M63VmVkg" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/3.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Основы HTML</span>
@@ -55,7 +63,7 @@
               <span class="face2__link"><a href="http://www.gordeevtimur.ru/lesson_4/src/" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/4.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Основы CSS</span>
@@ -64,7 +72,7 @@
               <span class="face2__link"><a href="http://www.gordeevtimur.ru/lesson_5/src/" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/5.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Блочная модель и позиционирование CSS</span>
@@ -73,7 +81,7 @@
               <span class="face2__link"><a href="http://www.gordeevtimur.ru/lesson_6/src/" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/6.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Flexbox CSS</span>
@@ -83,7 +91,7 @@
               <span class="face2__link"><a href="http://www.gordeevtimur.ru/lesson_7.2/src/" class="link">Доп. ссылка</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/7.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Вёрстка макета на HTML и CSS</span>
@@ -92,7 +100,7 @@
               <span class="face2__link"><a href="http://www.gordeevtimur.ru/lesson_8/src/" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/8.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Библиотека Bootstrap 4</span>
@@ -101,7 +109,7 @@
               <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_9/src/" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/9.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Вёрстка на Bootstrap 4</span>
@@ -110,7 +118,7 @@
               <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_10/src/" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/10.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Считаем цену за работу</span>
@@ -120,7 +128,7 @@
               <span class="face2__link"><a href="https://drive.google.com/open?id=17_HXyRFRS788pGU8-LMI7rGr7_f8rQSJfBupGur4ajQ" class="link">Доп. ссылка</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/11.svg" alt="Фото" class="face1__image">
               <span class="face1__header">Знакомство с Git</span>
@@ -129,7 +137,7 @@
               <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-          <li class="works__cards-item">
+          <li class="works__cards-item wow fadeInUp">
             <div class="face1">
               <img src="img/works/12.svg" alt="Фото" class="face1__image" height="150px" z-index="2">
               <span class="face1__header">Знакомство с Gulp</span>
@@ -138,7 +146,7 @@
               <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
             </div>
           </li>
-           <li class="works__cards-item">
+           <li class="works__cards-item wow fadeInUp">
              <div class="face1">
                <img src="img/works/13.svg" alt="Фото" class="face1__image">
                <span class="face1__header">БЭМ</span>
@@ -147,7 +155,7 @@
                <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
              </div>
            </li>
-            <li class="works__cards-item">
+            <li class="works__cards-item wow fadeInUp">
               <div class="face1">
                 <img src="img/works/14.svg" alt="Фото" class="face1__image" height="100px">
                 <span class="face1__header">Препроцессоры в CSS</span>
@@ -156,7 +164,7 @@
                 <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
               </div>
             </li>
-             <li class="works__cards-item">
+             <li class="works__cards-item wow fadeInUp">
                <div class="face1">
                  <img src="img/works/15.svg" alt="Фото" class="face1__image">
                  <span class="face1__header">Шрифты</span>
@@ -165,7 +173,7 @@
                  <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                </div>
              </li>
-              <li class="works__cards-item">
+              <li class="works__cards-item wow fadeInUp">
                 <div class="face1">
                   <img src="img/works/16.svg" alt="Фото" class="face1__image">
                   <span class="face1__header">Псевдоклассы и псевдоэлементы</span>
@@ -174,7 +182,7 @@
                   <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                 </div>
               </li>
-               <li class="works__cards-item">
+               <li class="works__cards-item wow fadeInUp">
                  <div class="face1">
                    <img src="img/works/17.svg" alt="Фото" class="face1__image">
                    <span class="face1__header">Адаптив. Desktop First + pixel perfect</span>
@@ -183,7 +191,7 @@
                    <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                  </div>
                </li>
-                <li class="works__cards-item">
+                <li class="works__cards-item wow fadeInUp">
                   <div class="face1">
                     <img src="img/works/18.svg" alt="Фото" class="face1__image" height="100px">
                     <span class="face1__header">Адаптив секции с карточками</span>
@@ -192,7 +200,7 @@
                     <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item">
+                <li class="works__cards-item wow fadeInUp">
                   <div class="face1">
                     <img src="img/works/19.svg" alt="Фото" class="face1__image">
                     <span class="face1__header">Знакомство с JavaScript</span>
@@ -201,7 +209,7 @@
                     <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item">
+                <li class="works__cards-item wow fadeInUp">
                   <div class="face1">
                     <img src="img/works/20.svg" alt="Фото" class="face1__image">
                     <span class="face1__header">jQuery</span>
@@ -210,7 +218,7 @@
                     <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item">
+                <li class="works__cards-item wow fadeInUp">
                   <div class="face1">
                     <img src="img/works/21.svg" alt="Фото" class="face1__image">
                     <span class="face1__header">Видео-фон на сайте</span>
@@ -220,7 +228,7 @@
                         по ссылке</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item">
+                <li class="works__cards-item wow fadeInUp">
                   <div class="face1">
                     <img src="img/works/22.svg" alt="Фото" class="face1__image">
                     <span class="face1__header">Слайдеры на сайте</span>
@@ -229,107 +237,154 @@
                     <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow fadeInUp">
                   <div class="face1">
-                    <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <img src="img/works/23.svg" alt="Фото" class="face1__image">
+                    <span class="face1__header">Анимация на CSS3</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow fadeInUp">
                   <div class="face1">
-                    <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <img src="img/works/24.svg" alt="Фото" class="face1__image">
+                    <span class="face1__header">Валидация форм</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="http://gordeevtimur.ru/lesson_12-22/src/" class="link">Перейти по ссылке</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow pulse inprogress" data-wow-iteration="3">
                   <div class="face1">
-                    <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <img src="img/works/inprogress.svg" alt="Фото" class="face1__image">
+                    <span class="face1__header">Гео-карты на сайте</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="" class="link">В процессе</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow pulse inprogress" data-wow-iteration="3">
                   <div class="face1">
-                    <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <img src="img/works/inprogress.svg" alt="Фото" class="face1__image">
+                    <span class="face1__header">Знакомство с PHP + формы</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="" class="link">В процессе</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow fadeInUp closed">
                   <div class="face1">
                     <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <span class="face1__header">jQuery AJAX</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="" class="link">Закрыто</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow fadeInUp closed">
                   <div class="face1">
                     <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <span class="face1__header">Аналитика для сайта</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="" class="link">Закрыто</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow fadeInUp closed">
                   <div class="face1">
                     <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <span class="face1__header">Введение в CSS Grid</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="" class="link">Закрыто</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow fadeInUp closed">
                   <div class="face1">
                     <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <span class="face1__header">WordPress</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="" class="link">Закрыто</a></span>
                   </div>
                 </li>
-                <li class="works__cards-item closed">
+                <li class="works__cards-item wow flipInX closed">
                   <div class="face1">
-                    <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
+                    <img src="img/works/finish.svg" alt="Фото" class="face1__image">
+                    <span class="face1__header">Дипломный проект</span>
                   </div>
                   <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
-                  </div>
-                </li>
-                <li class="works__cards-item closed">
-                  <div class="face1">
-                    <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
-                  </div>
-                  <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
-                  </div>
-                </li>
-                <li class="works__cards-item closed">
-                  <div class="face1">
-                    <img src="img/works/closed.svg" alt="Фото" class="face1__image">
-                    <span class="face1__header">Закрыто</span>
-                  </div>
-                  <div class="face2">
-                    <span class="face2__link"><a href="" class="link">Куда лезем ещё рано</a></span>
+                    <span class="face2__link"><a href="" class="link">Закрыто</a></span>
                   </div>
                 </li>
           
         </ul>
+
+        <div class="extraworks">
+          <div class="extraworks__title wow zoomInUp">
+            <img src="img/star.svg" alt="">
+            <h2 class="extraworks__title__header">Задания на баллы</h2>
+            <img src="img/star.svg" alt="">
+          </div>
+          <ul class="works__cards">
+            <li class="works__cards-item wow fadeInUp">
+              <div class="face1">
+                <img src="img/works/1.svg" alt="Фото" class="face1__image">
+                <span class="face1__header">Вёрстка на Bootstrap 4</span>
+              </div>
+              <div class="face2">
+                <span class="face2__link"><a href="http://gordeevtimur.ru/extrahomework_1/src/" class="link">Перейти по ссылке</a></span>
+              </div>
+            </li>
+            <li class="works__cards-item wow fadeInUp">
+              <div class="face1">
+                <img src="img/works/1.svg" alt="Фото" class="face1__image">
+                <span class="face1__header">Вёрстка с FlexBox</span>
+              </div>
+              <div class="face2">
+                <span class="face2__link"><a href="http://gordeevtimur.ru/extrahomework_2/src/" class="link">Перейти по ссылке</a></span>
+              </div>
+            </li>
+            <li class="works__cards-item wow fadeInUp">
+              <div class="face1">
+                <img src="img/works/1.svg" alt="Фото" class="face1__image">
+                <span class="face1__header">Вёрстка по БЭМ</span>
+              </div>
+              <div class="face2">
+                <span class="face2__link"><a href="http://gordeevtimur.ru/extrahomework_3.1/src/" class="link">Перейти по ссылке</a></span>
+                <span class="face2__link"><a href="http://gordeevtimur.ru/extrahomework_3.2/src/" class="link">Доп. ссылка</a></span>
+              </div>
+            </li>
+            <li class="works__cards-item wow fadeInUp">
+              <div class="face1">
+                <img src="img/works/1.svg" alt="Фото" class="face1__image">
+                <span class="face1__header">Вёрстка с Sass</span>
+              </div>
+              <div class="face2">
+                <span class="face2__link"><a href="https://yadi.sk/d/aRlldZMz3rztTQ" class="link">Перейти по ссылке</a></span>
+              </div>
+            </li>
+            <li class="works__cards-item wow fadeInUp">
+              <div class="face1">
+                <img src="img/works/1.svg" alt="Фото" class="face1__image">
+                <span class="face1__header">Подключение шрифтов</span>
+              </div>
+              <div class="face2">
+                <span class="face2__link"><a href="http://gordeevtimur.ru/extrahomework_5/src/" class="link">Перейти по ссылке</a></span>
+              </div>
+            </li>
+            <li class="works__cards-item wow fadeInUp">
+              <div class="face1">
+                <img src="img/works/1.svg" alt="Фото" class="face1__image">
+                <span class="face1__header">Вёрстка с Pixel Perfect</span>
+              </div>
+              <div class="face2">
+                <span class="face2__link"><a href="http://gordeevtimur.ru/extrahomework_6/src/" class="link">Перейти по ссылке</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
@@ -347,8 +402,8 @@
 
    
 
-
-
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>
