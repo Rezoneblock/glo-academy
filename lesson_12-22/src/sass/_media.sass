@@ -36,8 +36,13 @@
 
 
 @media screen and ( max-width:  860px )   
-  .steps
+  .steps, .customers, .footer__menu
     display: none
+  .footer
+    &__wrap
+      margin-top: -150px
+    &__map
+      margin-bottom: 0
   .section  
    &-title
     &__text
@@ -87,8 +92,9 @@
       margin-bottom: 6rem
 
 @media screen and ( max-width:  576px )
+  .projects, .project, .footer, .footer__wrap, .control, .header
+    background: $dark
   .control
-    background-color: $dark
     color: $light
     &__input-group
       flex-basis: 100%
@@ -100,7 +106,6 @@
     &__policy
       margin-top: -60px
   .project
-    background-color: $dark
     &-title
       color: $light
       &__description
@@ -123,6 +128,8 @@
     position: relative
     padding-top: 12.5rem
     height: 100%
+    &::after
+      background-color: #252525
     &__scroll-down
       display: none !important
     &__content
