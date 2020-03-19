@@ -542,6 +542,7 @@ template {
 
 label.invalid {
   color: tomato;
+  margin-bottom: -16px;
 }
 
 input.invalid {

@@ -163,27 +163,27 @@ $(document).ready(function () {
 /*-------------------------*/
 
 
-/*<-- Animation  --> */
-  new WOW().init();
+// /*<-- Animation  --> */
+//   new WOW().init();
 
-  $(window).scroll(function () {
-    var title1 = $('.projects__section-title');
-    if ($(this).scrollTop() > title1.offset().top - 900) {
-      title1.addClass('slider-title-animation');
-      title1.removeClass('opacity0');
-    }
-    var buttons = $('.buttons');
-    if ($(this).scrollTop() > buttons.offset().top - 1100) {
-      buttons.addClass('buttons-animation');
-      buttons.removeClass('opacity0');
-    }
-    var control = $('.control-animation');
-    if ($(this).scrollTop() > control.offset().top - 800) {
-      control.addClass('control-animations');
-      control.removeClass('opacity0');
-    }
-  });
-/*<--            --> */
+//   $(window).scroll(function () {
+//     var title1 = $('.projects__section-title');
+//     if ($(this).scrollTop() > title1.offset().top - 900) {
+//       title1.addClass('slider-title-animation');
+//       title1.removeClass('opacity0');
+//     }
+//     var buttons = $('.buttons');
+//     if ($(this).scrollTop() > buttons.offset().top - 1100) {
+//       buttons.addClass('buttons-animation');
+//       buttons.removeClass('opacity0');
+//     }
+//     var control = $('.control-animation');
+//     if ($(this).scrollTop() > control.offset().top - 800) {
+//       control.addClass('control-animations');
+//       control.removeClass('opacity0');
+//     }
+//   });
+// /*<--            --> */
 
 
 
@@ -218,12 +218,69 @@ $(document).ready(function () {
          email: "Введите корректный email"
        }
      }
-
-   });
-
+    });
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // required 
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // required group
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    // error massages
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя должно быть короче 15 букв"
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    }
+  });
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // required 
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // required group
+      question: {
+        required: true
+      }
+    },
+    // error massages
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя должно быть короче 15 букв"
+      },
+      userPhone: "Заполните поле",
+      question: {
+        required: "Заполните поле"
+      }
+    }
+  });
 
    //mask for telephone
    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+   $('.Username').mask('AAAAAAAAAAAAAAA');
 
 });
 
