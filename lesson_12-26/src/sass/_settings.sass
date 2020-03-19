@@ -1,0 +1,74 @@
+*,*:before,*:after
+  box-sizing: border-box
+
+html
+  font-size: 14px 
+
+body
+  font-family: 'Futura Book', sans-serif;
+  font-size: 1rem;
+
+img
+  max-width: 100%
+
+.opacity0
+  opacity: 0
+
+  
+.section
+  &--dark
+    background-color: $dark
+    color: $light
+  &-title
+    text-align: center
+    &--light
+      color: $light
+    &--left
+      text-align: left
+    &--center
+      text-align: center
+    &__heading
+      font-size: 1.43rem
+      font-weight: 400
+      text-transform: uppercase
+      font-family: 'Yeseva One', cursive
+      line-height: 138%
+      &--primary
+        color: $primary
+    &__word
+      display: flex
+      align-items: center
+      &::after
+        content: ''
+        width: 92px
+        height: 2px
+        background-color: $primary
+        margin-left: 2.35rem
+
+    &__image
+      &::before, &::after
+       display: inline-block
+       vertical-align: text-top
+       content: ''
+       width: 32px
+       height: 2px
+       background-color: $primary
+       margin: 0 10px;
+    &__text
+      text-transform: none
+      font-family: 'Futura Book'
+      font-size: 1.285rem
+      line-height: 2.071rem
+      font-weight: normal
+      max-width: 31.57rem
+    &__description
+      text-transform: none
+      font-family: 'Futura Book'
+      font-size: 1.428rem
+      line-height: 1.93rem
+      font-weight: normal
+      color: #363636;
+
+
+
+        
