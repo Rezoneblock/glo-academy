@@ -1,0 +1,132 @@
+
+.steps
+  padding-top: 450px
+  padding-bottom: 25rem
+  margin-top: -450px
+  background: url('../img/bg-dark-city-lines.svg') no-repeat center 0px / cover
+  background-color: $dark 
+  color: $light
+  font-family: 'Yeseva One', cursive
+  &__main
+    &-text-content
+      width: 330px
+      height: 350px
+      display: flex
+      flex-direction: column
+      &__heading
+        text-transform: uppercase
+        font-weight: normal
+        font-size: 1.071rem
+        line-height: 1.642rem
+        color: $primary
+        margin: 0
+      &__description
+        font-family: 'Futura Book'
+        font-size: 1.071rem
+        line-height: 1.785rem
+        margin-bottom: 60px
+  &__swiper
+    &-bullets
+      display: flex
+      flex-direction: row
+      span
+        transition: .5s
+        width: 10px
+        height: 10px
+        background-color: $light
+        border-radius: 50%
+        margin-right: 17px
+        opacity: .5
+        &:first-of-type
+          margin-left: 17px
+
+    &-images
+      margin-left: 50px
+    &-menu
+      margin-top: 90px
+      margin-left: 100px
+      list-style: none
+      display: flex
+      flex-wrap: wrap
+      &__desc
+        font-size: 1.071rem
+        line-height: 1.285rem
+        font-family: 'Futura Book'
+        font-weight: normal
+      &__number
+        position: relative
+        display: block
+        font-size: 1.071rem
+        line-height: 1.5rem
+        font-weight: normal
+        text-transform: uppercase
+        margin-bottom: 12px
+        width: 18px
+        &::after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 1px
+          background-color: $primary
+      &__item
+        width: 33%
+        transition: .5s
+        margin-bottom: 36px
+        opacity: .5
+        cursor: pointer
+    &__button
+      height: 15px
+      display: flex
+    &-button
+      height: 15px
+      &-prev, &-next
+        outline: none
+        cursor: pointer
+        background-size: 42px
+        width: 42px
+        height: 1rem
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        &::after
+          display: none
+      &-prev
+        background: url('../img/arrow-prev.svg') no-repeat center
+      &-next
+        background: url('../img/arrow-next.svg') no-repeat center
+    &-pagination
+      &-bullet
+        margin: 0 0.65rem
+        background-color: rgba($light, 0.3)
+        width: 0.683rem
+        height: 0.683rem
+        &-active
+          background-color: $light
+    &-fraction
+      font-weight: normal;
+      font-size: 1.285rem
+      line-height: 1.785rem
+      text-transform: uppercase;
+      margin-bottom: 20px
+  &__section-title
+    margin-bottom: 60px
+    display: flex
+    flex-direction: column
+    &__text
+      font-size: 1.071rem
+      line-height: 1.2rem
+      text-transform: uppercase
+      font-family: 'Futura Demi'
+      font-weight: 500
+    &__heading
+      text-transform: uppercase
+      line-height: 2.642rem
+      font-size: 1.928rem
+      font-weight: normal
+      color: $primary
+    &__word
+      &::after
+        margin-left: 90px
+
+.item--active, .bullet--active
+  opacity: 1 !important

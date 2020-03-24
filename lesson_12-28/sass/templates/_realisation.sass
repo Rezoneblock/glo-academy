@@ -1,0 +1,85 @@
+.realisation
+  padding-top: 100px
+  background: $dark url('../img/realisation/bg.jpg') no-repeat center / cover
+  .swiper-container
+    position: relative
+    max-width: 340px
+    max-height: 242px
+  .swiper-slide
+    display: flex
+    justify-content: center
+  .realisation__swiper-button-prev, .realisation__swiper-button-next
+    top: 45%
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $primary
+    border-radius: 50%
+    height: 36px
+    width: 36px
+    z-index: 999
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  .realisation__swiper-button-prev
+    left: 1%
+  .realisation__swiper-button-next
+    left: 88.5%
+    
+  .swiper-navigation
+    display: flex
+  &__title
+    margin-bottom: 45px
+    max-width: 29.35rem
+    font-family: 'Yeseva One', cursive
+    font-size: 1.928rem
+    line-height: 2.642rem
+    text-transform: uppercase
+    color: $primary
+  &__fantasy-list
+    padding-left: 0
+    list-style: none
+    display: flex
+    flex-direction: column
+    &__item
+      margin-bottom: 15px
+    &__text
+      position: relative
+      letter-spacing: .8px
+      cursor: pointer
+      font-family: 'Futura Book'
+      color: $light
+      font-weight: 500
+      font-size: 1.428rem
+      line-height: 2.428rem
+      transition: .5s
+      &:hover
+        color: $primary
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 0%
+        height: 1px
+        background-color: $primary
+        transition: .5s
+      &:hover::after
+        width: 100%
+  &__images
+    .col-50
+      position: relative
+    &__box-first, &__box-second
+      position: absolute
+      img
+        max-width: 100%
+        margin-bottom: 40px
+    &__box-first
+      left: 0
+      top: -180px
+    &__box-second
+      left: 20px
+      top: -280px
+
+#slider-third
+  display: none
+

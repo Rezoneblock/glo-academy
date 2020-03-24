@@ -1,0 +1,40 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+  .hero
+    &__content
+      margin-top: -600px
+    &__scroll-down
+      padding-top: 30px
+  .instagram
+    &__link
+      &::after 
+        content: '______' !important
+        display: flex
+        margin-bottom: 25px
+  .swiper
+    &-pagination
+      margin-top: -1px
+  .control
+    &__video
+      img
+        margin-top: 150px
+  .policy
+    &__label
+      position: relative 
+      &::before
+       position: absolute
+       left: 0  
+  .modal
+    &__policy
+      label::before
+        left: -26px
+       
+
+
+
+@-moz-document url-prefix() 
+  .team
+    &__description
+      &__text
+        &::before
+          left: 45% !important
+
