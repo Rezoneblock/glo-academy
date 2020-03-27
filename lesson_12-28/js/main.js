@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+$(document.body).ready(function () {
 
 
      /* <-- Плавный якорь --> */
@@ -13,17 +13,26 @@ $(document).ready(function () {
       });
     });
 
-  // /* <-- lazy load img --> */
-  // const images = document.querySelectorAll('img');
+  /* <-- lazy load img --> */
 
-  // const options = {
+
+  $(function () {
+    $("img.lazy").lazyload();
+  });
+
+
+
+
+  // var images = document.querySelectorAll('.load-image');
+
+  // var options = {
   //   root: null,
   //   rootMargin: '0px',
   //   threshold: 0.1
   // }
 
   // function handleImg(myImg, observer) {
-  //   myImg.forEach(myImgSingle => {
+  //   myImg.forEach(function(myImgSingle)  {
   //     if (myImgSingle.intersectionRatio > 0) {
   //       loadImage(myImgSingle.target);
   //     }
@@ -34,9 +43,9 @@ $(document).ready(function () {
   //   image.src = image.getAttribute('data');
   // }
 
-  // const observer = new IntersectionObserver(handleImg, options);
+  // var observer = new IntersectionObserver(handleImg, options);
 
-  // images.forEach(img => {
+  // images.forEach(function (img) {
   //   observer.observe(img);
   // })
 
@@ -134,6 +143,8 @@ $(document).ready(function () {
         nextEl: '#next1',
         prevEl: '#prev1',
       },
+      preloadImages: false,
+      lazy: true
     })
 
     var mySwiper2 = new Swiper('#slider-second', {
@@ -146,9 +157,11 @@ $(document).ready(function () {
         nextEl: ('.steps__swiper-button-next'),
         prevEl: ('.steps__swiper-button-prev'),
       },
+      preloadImages: false,
+      lazy: true
     })  
   var mySwiper = new Swiper('#slider-third', {
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: ('.realisation__swiper-button-next'),
       prevEl: ('.realisation__swiper-button-prev'),
@@ -223,7 +236,25 @@ $(document).ready(function () {
 
 
 /*-------------------------*/
+/* <-- custom swiper --> */
 
+
+$('.realisation__fantasy-list__text').on('click', function() {
+  var itemIndex = $(this).attr('id') - 19;
+  $('.realisation__images__block').removeClass('image-item-active');
+  $('#cs' + itemIndex).addClass('image-item-active');
+  $('.realisation__fantasy-list__text').removeClass('list-item-active');
+  $('.realisation__fantasy-list__text').addClass('list-item-simple');
+  $(this).removeClass('list-item-simple');
+  $(this).addClass('list-item-active');
+})
+
+
+
+
+
+
+/* --------------------- */
 
 /*<-- Animation  --> */
   new WOW().init();
@@ -238,11 +269,6 @@ $(document).ready(function () {
     if ($(this).scrollTop() > buttons.offset().top - 1100) {
       buttons.addClass('buttons-animation');
       buttons.removeClass('opacity0');
-    }
-    var control = $('.control-animation');
-    if ($(this).scrollTop() > control.offset().top - 800) {
-      control.addClass('control-animations');
-      control.removeClass('opacity0');
     }
   });
 /*<--            --> */
@@ -260,7 +286,10 @@ $(document).ready(function () {
          minlength: 2,
          maxlength: 15
        },
-       userPhone: "required",
+       userPhone: {
+         required: true,
+         minlength: 11
+       },
        // required group
        userEmail: {
          required: true,
@@ -277,7 +306,10 @@ $(document).ready(function () {
          minlength: "Имя не короче 2 букв",
          maxlength: "Имя должно быть короче 15 букв"
        }, 
-       userPhone: "Заполните поле",
+       userPhone: {
+         required: "Заполните поле",
+         minlength: "Введите корректный номер"
+       },
        policyCheckbox: "Требуется согласие",
        userEmail: {
          required: "Заполните поле",
@@ -320,7 +352,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 11
+      },
       // required group
       userEmail: {
         required: true,
@@ -337,7 +372,10 @@ $(document).ready(function () {
         minlength: "Имя не короче 2 букв",
         maxlength: "Имя должно быть короче 15 букв"
       },
-      userPhone: "Заполните поле",
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите корректный номер"
+      },
       policyCheckbox: "Требуется согласие",
       userEmail: {
         required: "Заполните поле",
@@ -352,12 +390,8 @@ $(document).ready(function () {
         success: function (response) {
           console.log('ajax сработал. Ответ сервера: ' + response);
           $(form)[0].reset();
-          modal.removeClass('modal--visible');
-          $('.form').css('display', 'none');
-          $('.form-content').css('display', 'none');
-          $('.form-thanks').css('display', 'block');
-          $('.footer__wrap').css('padding', '10px 20px 30px');
-          $('.footer__wrap').css('margin-top', '-15rem');
+          $('.control__form').css('display', 'none');
+          $('.control__form-thanks').css('display', 'block');
           ym('61238857', 'reachGoal', 'call-button');
           return true;
         },
@@ -383,7 +417,10 @@ $(document).ready(function () {
          minlength: 2,
          maxlength: 15
        },
-       userPhone: "required",
+       userPhone: {
+         required: true,
+         minlength: 11
+       },
        // required group
        userEmail: {
          required: true,
@@ -400,7 +437,10 @@ $(document).ready(function () {
          minlength: "Имя не короче 2 букв",
          maxlength: "Имя должно быть короче 15 букв"
        },
-       userPhone: "Заполните поле",
+       userPhone: {
+         required: "Заполните поле",
+         minlength: "Введите корректный номер"
+       },
        policyCheckbox: "Требуется согласие",
        userEmail: {
          required: "Заполните поле",
@@ -415,9 +455,9 @@ $(document).ready(function () {
          success: function (response) {
            console.log('Ответ сервера: ' + response);
            $(form)[0].reset();
-           modal.removeClass('modal--visible');
-           modalThanks.css('opacity', '1');
-           modalThanks.css('visibility', 'visible');
+           $('.proposal__form').css('display', 'none');
+           $('.proposal__form-content').css('display', 'none');
+           $('.proposal__form-thanks').css('display', 'block');
            ym('61238857', 'reachGoal', 'call-button');
            return true;
          },
@@ -443,7 +483,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 11
+      },
       // required group
       userQuestion: {
         required: true
@@ -462,7 +505,10 @@ $(document).ready(function () {
         minlength: "Имя не короче 2 букв",
         maxlength: "Имя должно быть короче 15 букв"
       },
-      userPhone: "Заполните поле",
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Введите корректный номер"
+      },
       policyCheckbox: "Требуется согласие",
       question: {
         required: "Заполните поле"
@@ -477,9 +523,9 @@ $(document).ready(function () {
           console.log('ajax сработал. Ответ сервера: ' + response);
           $(form)[0].reset();
           modal.removeClass('modal--visible');
-          $('.form').css('display', 'none');
-          $('.form-content').css('display', 'none');
-          $('.form-thanks').css('display', 'block');
+          $('.footer__form').css('display', 'none');
+          $('.footer__form-content').css('display', 'none');
+          $('.footer__form-thanks').css('display', 'block');
           $('.footer__wrap').css('padding', '10px 20px 30px');
           $('.footer__wrap').css('margin-top', '-15rem');
           ym('61238857', 'reachGoal', 'button')
@@ -500,7 +546,7 @@ $(document).ready(function () {
   });
 
    //mask for telephone
-   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "Ваш номер телефона:"});
 
 
 

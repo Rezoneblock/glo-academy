@@ -13,6 +13,17 @@
   display: flex
   align-items: center
   justify-content: center
+  #policyCheckbox-error
+    margin-bottom: -30px
+    font-size: 12px
+  .invalid
+    font-size: 12px 
+  .main-modal__policy
+    margin-right: 50px;
+    margin-top: -40px;
+  .input
+    font-size: 18px !important
+    min-height: 35px
   &--visible
     opacity: 1
     visibility: visible
@@ -32,6 +43,7 @@
     border: none
     margin: 12px
     cursor: pointer
+    outline: none
   &-thanks
     opacity: 0
     visibility: hidden
@@ -64,6 +76,7 @@
   &__title
     font-family: 'Yeseva One', cursive
     font-size: 1.357rem
+    font-weight: normal
     text-align: center
     margin: 0
     margin-bottom: 2.428rem
@@ -75,10 +88,11 @@
       display: flex
       flex-direction: column
       margin-bottom: 3.428rem
-      min-height: 56px
+      min-height: 67px
     &:last-of-type
       margin-bottom: 1rem
   &__policy
     margin-bottom: 2.7rem
   &__button
     align-self: flex-end
+    outline: none

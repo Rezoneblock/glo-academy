@@ -2,17 +2,20 @@
 .steps
   padding-top: 450px
   padding-bottom: 25rem
-  margin-top: -450px
+  margin-top: -500px
   background: url('../img/bg-dark-city-lines.svg') no-repeat center 0px / cover
   background-color: $dark 
   color: $light
   font-family: 'Yeseva One', cursive
+  .col-70
+    margin-left: 70px
   &__main
     &-text-content
       width: 330px
       height: 350px
       display: flex
       flex-direction: column
+      margin-right: 0
       &__heading
         text-transform: uppercase
         font-weight: normal
@@ -21,11 +24,16 @@
         color: $primary
         margin: 0
       &__description
+        max-width: 327px !important
         font-family: 'Futura Book'
         font-size: 1.071rem
         line-height: 1.785rem
         margin-bottom: 60px
   &__swiper
+    &-wrapper
+      &__images
+          max-width: 765px 
+          max-height: 377px
     &-bullets
       display: flex
       flex-direction: row
@@ -35,16 +43,19 @@
         height: 10px
         background-color: $light
         border-radius: 50%
-        margin-right: 17px
+        margin-right: 22px
         opacity: .5
         &:first-of-type
           margin-left: 17px
 
     &-images
-      margin-left: 50px
+      margin-right: 60px
+      max-width: 765px
+      max-height: 377px
     &-menu
+      width: 100%
       margin-top: 90px
-      margin-left: 100px
+      padding-left: 0
       list-style: none
       display: flex
       flex-wrap: wrap
@@ -71,11 +82,16 @@
           height: 1px
           background-color: $primary
       &__item
-        width: 33%
-        transition: .5s
+        min-width: 140px
+        margin-right: 175px
         margin-bottom: 36px
+        transition: .5s
         opacity: .5
         cursor: pointer
+        &:nth-child(3n)
+          margin-right: 0
+          min-width: 1px
+          max-width: 100px
     &__button
       height: 15px
       display: flex
@@ -130,3 +146,5 @@
 
 .item--active, .bullet--active
   opacity: 1 !important
+
+

@@ -1,15 +1,44 @@
 .realisation
+  color: $light
   padding-top: 100px
   background: $dark url('../img/realisation/bg.jpg') no-repeat center / cover
-  .swiper-container
+  &__section-title__heading
+    font-size: 27px
+  .load-image
+    border: 0.1px solid #000
+  &__swiper-container1
     position: relative
     max-width: 340px
     max-height: 242px
-  .swiper-slide
+  &__swiper-slide1
     display: flex
     justify-content: center
+  .list-item-simple
+    color: $light 
+    &::after 
+      width: 0%
+  .list-item-active 
+    color: $primary !important
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100% !important
+      height: 1px
+      background-color: $primary
+      transition: .5s
+  &__images
+    &__block
+      transition: .5s
+  .realisation__images__block
+    opacity: 0
+    visibility: hidden
+  .image-item-active
+    opacity: 1 !important
+    visibility: visible
   .realisation__swiper-button-prev, .realisation__swiper-button-next
-    top: 45%
+    top: 38%
     position: absolute
     display: flex
     justify-content: center
@@ -46,8 +75,7 @@
       position: relative
       letter-spacing: .8px
       cursor: pointer
-      font-family: 'Futura Book'
-      color: $light
+      font-family: 'Arial'
       font-weight: 500
       font-size: 1.428rem
       line-height: 2.428rem
@@ -68,8 +96,10 @@
   &__images
     .col-50
       position: relative
+      &:last-of-type
     &__box-first, &__box-second
       position: absolute
+      margin-left: -16px
       img
         max-width: 100%
         margin-bottom: 40px
