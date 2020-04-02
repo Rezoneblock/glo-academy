@@ -1,0 +1,342 @@
+@media screen and ( max-width: 1600px )
+  .hero
+    &__header
+      &__logo
+        margin-right: auto !important
+    &__catalog
+      &__list
+        &__name
+          font-size: 14px !important
+    &__content
+      &__links
+        margin-left: 100px
+@media screen and ( max-width: 1450px )
+
+  .categories, .popular-products
+    .row
+      flex-wrap: wrap
+      .col-20
+        width: 50% !important
+        display: flex
+        margin-bottom: 20px
+        &:nth-of-type(n + 3)
+          margin-bottom: 0
+        &:nth-of-type(odd)
+          justify-content: flex-end
+          margin-left: -10px
+        &:nth-of-type(even)
+          justify-content: flex-start
+          margin-right: -10px
+  .hero
+    &__content
+      &__product__description
+        margin-top: 330px
+      &__links
+        margin-left: 100px
+  .statement
+    &__button
+      margin-right: -40px !important
+    .row 
+      flex-wrap: wrap
+      justify-content: center !important
+      .col-33
+        margin-right: 20px
+        &:nth-of-type(3)
+          margin-right: 0
+        &:nth-of-type(2)
+          margin-right: 0
+          .popular
+            margin-right: 0px
+            margin-left: 40px 
+            min-width: 150px
+            margin-right: 50px
+          .person
+            margin-right: -20px !important
+      .col-40
+        margin-left: -50px !important
+        img
+          margin-left: 10px !important
+          margin-right: auto !important
+    .col-100-first
+      margin-top: 20px
+      width: 100% !important
+@media screen and ( max-width: 1400px )      
+  .hero
+    padding-bottom: 50px
+    &__content
+      &__header
+        padding: 10px 0
+      &__image
+        margin-top: 50px
+        margin-bottom: -100px
+      &__product__description
+        margin-left: -150px
+        margin-top: 0
+      &__links
+        margin-left: 0
+        margin-top: 50px
+@media screen and ( max-width: 1280px )
+  .sale
+    .row
+      margin: 0 auto
+      flex-wrap: wrap
+      max-width: 560px
+    &__ellipse
+      &:nth-of-type(n+4)
+        margin-top: 20px
+    &__image
+      &__between
+        display: flex
+      &__hide
+        display: none
+  .statement
+    .col-33
+      &:nth-of-type(2)
+        .popular
+          margin-left: 0 !important
+        img
+          margin-left: 10px
+    &__button
+      margin-right: -30px !important
+  .hero
+    &__catalog
+      &__list
+        &__item
+          margin-right: 15px !important
+        &__name
+          font-size: 12px !important
+    &__content
+      &__image
+@media screen and ( max-width: 1180px )
+  .statement
+    .row
+      align-items: center
+      flex-direction: column
+    .col-33
+      margin: 0 !important
+      margin-top: 20px !important
+      min-width: 430px !important
+      max-width: 430px !important
+      &:nth-of-type(2)
+        img
+          margin-left: auto
+        .popular
+          margin-right: -20px !important
+        
+
+  .hero
+    &__content
+      &__image
+        margin-top: 80px
+@media screen and ( max-width: 1080px )
+  .header
+    .menu
+      &__nav
+        img
+          margin-top: 2px
+          max-height: 10px
+          &:last-of-type
+            max-height: 18px
+        &__link
+          font-size: 10px
+  .hero
+    padding-bottom: 50px
+    &__content
+      &__header
+        &__title
+          font-size: 30px !important
+        &__image
+          margin-top: 150px
+      &__navigation-buttons
+        margin-top: 10px
+@media screen and ( max-width: 991px )
+  .menu
+    &__nav
+      display: none
+  .hero
+    &__catalog
+      display: none
+    &__burger-menu
+      display: block
+    &__content
+      &__product__description
+        margin-top: 50px
+      &__header
+        padding: 50px 0
+      &__col4
+        display: none
+      &__links
+        display: none
+      &__navigation-buttons
+        display: none
+      &__image
+        margin-top: 150px
+
+  
+@media screen and ( max-width: 900px )
+  .statement
+    .symbol
+      display: none
+    &--bold
+      display: block
+    &__section-title
+      &__header
+        text-align: center
+
+  .header
+    .menu
+      &__nav
+        &__item
+          margin-right: 10px
+          padding: 0 12px
+          &:first-of-type::after
+            right: 10px
+          &::after
+            right: -15px 
+          &:last-of-type
+            img
+              margin-left: 14px
+@media screen and ( max-width: 810px )
+  .hero
+    padding-bottom: 0
+    &__content
+      padding: 0
+      &__image
+        margin-top: 135px
+
+@media screen and ( max-width: 760px )
+  .categories, .popular-products
+    .section-title
+      &__header
+        min-width: 300px
+    .row
+      flex-direction: column
+      align-items: center
+      .col-20
+        min-width: 320px
+        margin-left: 0 !important
+        margin-right: 0 !important
+        &:nth-of-type(n + 3)
+          margin-bottom: 20px
+        &:last-of-type
+          margin-bottom: 0
+
+  .header
+    .menu
+      &__nav
+        display: none
+  .hero
+    &__content
+      &__image
+        display: none !important
+      &__col3
+        display: none
+@media screen and ( max-width: 610px )
+  .sale
+    .row
+      flex-direction: column
+    &__image
+      display: none
+      &__between
+        display: none  
+    &__ellipse
+      margin-top: 20px
+      margin-left: auto
+      margin-right: auto
+@media screen and ( max-width: 550px )
+  .section-title
+    &::after, &::before 
+      display: none
+    &__header
+      border: none
+      padding: 0
+  .hero
+    &__burger-menu
+      margin-right: 30px
+@media screen and ( max-width: 500px )
+  .statement
+    &__section-title
+      &__header
+        font-size: 18px !important
+        padding: 20px
+    .col-33
+      max-width: 430px !important
+      min-width: 100% !important
+      min-height: 250px
+      .very-popular
+        margin-right: -30px !important
+      .popular
+        min-width: 130px
+        font-size: 12px
+      .person
+        font-size: 20px
+    &__button
+      margin-top: auto
+      margin-bottom: 20px
+  #logo__description
+    display: block
+    display: flex
+    flex-direction: column
+  .hero
+    &__products-status
+      margin-left: auto
+    &__header__logo
+      display: none
+    &__content
+      &__header
+        &__title
+          font-size: 26px !important
+          min-width: 1px
+@media screen and ( max-width: 400px )
+  .categories
+    .col-20
+      min-width: 300px
+  .hero
+    &__header
+      &__logo
+        &__name
+          font-size: 16px !important
+        &__desc
+          font-size: 9px !important
+    &__burger-menu
+      margin-right: 10px
+    &__content
+      &__header
+        &__title
+          font-size: 20px !important  
+  .statement
+    .col-33
+      &:first-of-type
+        img
+          margin-left: -30px !important
+      &:nth-of-type(2)
+        .person
+          margin-left: -30px !important
+      .person, .popular, .very-popular
+        margin-right: 0 !important
+        margin-left: -30px !important
+  .popular-products
+    .col-20
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      min-width: 1px !important
+  .product
+    &__price
+      width: 250px !important
+    &__image
+      display: flex
+      justify-content: center
+      min-width: 0 !important
+      min-height: 0 !important
+      img 
+        width: 250px
+        height: 250px
+@media screen and ( max-width: 350px )
+  .categories
+    .col-20
+      min-width: 100% !important
+  .section-title
+    &__header
+       min-width: 100% !important

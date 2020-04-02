@@ -1,0 +1,256 @@
+.hero
+  overflow: hidden
+  background-color: $graybg
+  margin-top: 40px
+  &__header
+    display: flex
+    padding: 20px 0
+    &__logo
+      display: flex
+      align-items: center
+      margin-right: 250px
+      &__description
+        margin-top: -7px
+        margin-left: 14px
+        display: flex
+        flex-direction: column
+      &__name
+        font-family: 'Din Pro Medium'
+        font-size: 24px
+        line-height: 30px
+        letter-spacing: 2px
+        text-transform: uppercase
+      &__desc
+        font-size: 12px !important
+        line-height: 10px
+        font-weight: 600
+        color: $dark
+  &__catalog
+    display: flex
+    align-items: center
+    &__list
+      display: flex
+      list-style: none 
+      &__item
+        margin-top: -15px
+        margin-right: 38px
+      &__name
+        font-family: 'Din Pro Medium'
+        font-size: 16px
+        text-decoration: none
+        transition: .2s
+        color: $dark
+        padding-bottom: 18px
+        &:hover
+          color: $orange
+          border-bottom: 1px solid $orange
+      &__search__image
+        margin-top: 3px
+        height: 16px
+        color: $orange
+  &__burger-menu
+    margin: auto 0
+    margin-right: 50px
+    display: none
+    background: url('../img/burger-menu.svg') no-repeat center / cover
+    width: 20px
+    height: 20px
+    transition: .3s
+    &__header
+      &__item
+        list-style: none
+        &:last-of-type
+          img
+            margin-left: 50px !important
+      &__list
+        padding-left: 10px
+        margin-left: 5px
+        border-left: 1px solid #ccc
+        display: flex
+        flex-direction: column
+        .menu__nav__item
+          margin-top: 10px
+          opacity: 1
+          img
+            margin-left: 4px
+            opacity: .6
+        .menu__nav__link
+          color: $light
+          margin-right: 0
+
+    &__content
+      display: flex
+      padding: 10px 20px
+      position: fixed
+      opacity: 0
+      visibility: hidden
+      width: 270px
+      background-color: $orange
+      margin-top: 55px
+      z-index: 999
+      transition: .5s
+      &__item
+        margin-top: 10px
+        &__name
+          text-decoration: none
+          color: $light
+          font-size: 14px
+      &__list
+        list-style: none
+  &__products-status
+    margin-top: -22px
+    display: flex 
+    &__number
+    &__likes
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 62px
+      height: 85px
+      background: url('../img/hero-product-status/form1.png') no-repeat center
+      color: $orange
+      transition: .1s
+      cursor: pointer
+      &:hover
+        margin-top: -10px
+      &__image
+        max-width: 20px
+    &__cart
+      margin-left: 10px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 62px
+      height: 85px
+      background: url('../img/hero-product-status/form2.png') no-repeat center
+      color: $light
+      transition: .1s
+      cursor: pointer
+      &:hover
+        margin-top: -10px
+      &__image
+  &__content
+    display: flex
+    padding-top: 60px
+    &__col4
+      width: 20px
+    &__header
+      position: relative
+      padding: 40px 0
+      &::after
+        content: ''
+        width: 50px
+        height: 1px
+        position: absolute
+        bottom: 0
+        left: 0
+        background-color: #ccc
+      &::before
+        content: ''
+        width: 50px
+        height: 1px
+        position: absolute
+        top: 0
+        left: 0
+        background-color: #ccc
+      &__button
+        cursor: pointer
+        font-family: 'Din Pro'
+        margin-top: 34px
+        outline: none
+        border: none
+        padding: 15px 35px
+        background-color: $dark
+        font-size: 18px
+        color: $light
+        transition: .5s
+        &:hover
+          box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.75);
+      &__title
+        text-transform: uppercase
+        min-width: 420px
+        font-family: 'Din Pro Light'
+        font-size: 36px
+        &--bold
+          font-family: 'Din Pro Bold'
+    &__navigation-buttons
+      margin-top: 40px
+      display: flex
+      img
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        max-width: 16px
+      &__prev, &__next
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 45px
+        height: 45px
+        transition: .5s
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        &:hover
+          box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.75);
+      &__prev
+        margin-right: 10px
+        border: 1px solid #ccc
+      &__next
+        background-color: $dark
+    &__image 
+      margin-top: 0px
+      margin-bottom: -10px
+      margin-left: -25px
+      overflow: hidden
+      max-height: 555px
+    &__product__description
+      min-width: 180px
+      padding-top: 20px
+      position: relative
+      margin-top: 378px
+      margin-left: -60px
+      font-size: 14px
+      color: #919191
+      font-family: 'Din Pro'
+      &::before
+        content: ''
+        width: 30px
+        height: 1px
+        position: absolute
+        top: 0
+        left: 0
+        background-color: #ccc
+      &--orange
+        color: $orange
+        font-size: 24px
+    &__links
+      min-width: 16px
+      margin-left: 235px
+      margin-top: 300px
+      display: flex
+      flex-direction: column
+      list-style: none
+      &__item
+        cursor: pointer
+        opacity: 0.3
+        max-height: 13px
+        margin-top: 28px
+        transition: .5s
+        &:hover
+          opacity: 1
+      &__item img
+        width: 16px       
+        max-height: 16px
+
+
+
+
+.burger--active
+  background: url('../img/close.svg') no-repeat center / cover
+  .hero__burger-menu__content
+    opacity: 1
+    visibility: visible
+#logo__description
+  display: none
+
+        

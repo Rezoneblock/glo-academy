@@ -1,0 +1,169 @@
+.product
+  display: flex
+  flex-direction: column
+  &__image
+    min-width: 320px
+    min-height: 320px
+    margin-bottom: 20px
+  &__description
+    font-family: 'Din Pro Light'
+    list-style: none
+  &__name
+    margin-left: 20px
+    font-family: 'Din Pro Regular'
+    font-size: 18px
+    margin-bottom: 5px
+    color: $dark
+    a 
+      color: $dark
+  &__type
+    margin-left: 20px
+    font-size: 14px
+    a 
+      color: #919191
+  &__link
+    text-decoration: none
+  &__rate
+    margin-left: 20px
+    margin-top: 20px
+    margin-bottom: 30px
+    position: relative
+    display: flex
+    justify-content: flex-end
+    flex-direction: row-reverse
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    input
+      display: none
+      &:checked ~ label::after
+        opacity: 1      
+    label
+      display: block
+      cursor: pointer
+      width: 20px
+      &:hover::after,
+      &:hover ~ label::after,
+        opacity: 1
+      &::before
+        content: '\f005'
+        font-family: 'fontAwesome'
+        position: relative
+        display: block
+        font-size: 15px
+      &::after
+        content: '\f005'
+        font-family: 'Font Awesome 5 Free'
+        font-weight: 900;
+        position: absolute
+        top: 0
+        display: block
+        font-size: 15px
+        color: gold
+        opacity: 0
+        transition: .3s
+        
+        
+  &__price
+    padding-top: 20px
+    display: flex
+    width: 320px
+    justify-content: space-between
+    align-items: center
+    border-top: 1px solid #d7d7d7
+  &__cost
+    font-family: 'Din Pro Regular'
+    font-size: 30px
+    color: $dark
+    margin-left: 20px
+  &__add-to-cart
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 24px
+    height: 24px
+    background-color: $dark
+    color: $light
+    border-radius: 50%
+    transition: .3s
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    &:hover
+      background-color: $light
+      color: $dark
+      border: 1px solid $dark
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+.popular, .very-popular
+  font-family: 'Din Pro Light'
+  font-size: 14px
+  color: #919191
+  line-height: 24px
+.person
+  font-family: 'Din Pro'
+  font-size: 24px
+  color: #000
+  line-height: 24px
+.button
+  cursor: pointer
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  font-family: 'Din Pro Medium'
+  font-size: 14px
+  padding: 15px 28px
+  outline: none
+  border: 2px solid $dark
+  color: $dark
+  transition: .3s
+  &__link
+    text-decoration: none
+    color: $dark
+.section-title
+  position: relative
+  display: flex
+  justify-content: center
+  text-align: center
+  align-items: center
+  margin-bottom: 50px
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 50%
+    width: 50%
+    height: 1px
+    background: linear-gradient(to right, #fff, $dark)
+    z-index: -999
+  &::after
+    content: ''
+    position: absolute
+    right: 0
+    top: 50%
+    width: 50%
+    height: 1px
+    background: linear-gradient(to left, #fff, $dark, $dark)
+    z-index: -999  
+  &__header
+    padding: 0 66px
+    font-family: 'Din Pro Light'
+    font-size: 36px
+    line-height: 30px
+    font-weight: normal
+    background-color: #fff
+    z-index: 999
+    border-left: 1px solid $dark 
+    border-right: 1px solid $dark 
